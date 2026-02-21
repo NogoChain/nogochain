@@ -1,0 +1,56 @@
+{
+  "pool": {
+    "name": "MainNet Mining Pool",
+    "fee": 0.01,
+    "minPayout": 1,
+    "payoutInterval": 3600,
+    "host": "0.0.0.0",
+    "port": 3333,
+    "sslPort": 3334,
+    "difficulty": 5000,
+    "maxDifficulty": 50000,
+    "varDiff": {
+      "enabled": true,
+      "minDifficulty": 1000,
+      "maxDifficulty": 50000,
+      "targetTime": 15,
+      "retargetTime": 90,
+      "variance": 0.3
+    }
+  },
+  "node": {
+    "rpcUrl": "http://127.0.0.1:8545",
+    "rpcTimeout": 30,
+    "maxConns": 10,
+    "blockRefreshInterval": 2000,
+    "jobRebroadcastInterval": 55
+  },
+  "workers": {
+    "maxWorkersPerIP": 10,
+    "hashrateExpiration": 600,
+    "invalidSharesBan": 5,
+    "banDuration": 600
+  },
+  "payment": {
+    "enabled": true,
+    "type": "pps",
+    "payoutThreshold": 1,
+    "payoutsPerRound": 100,
+    "minimumConfirmations": 10
+  },
+  "stats": {
+    "enabled": true,
+    "updateInterval": 5,
+    "history": {
+      "enabled": true,
+      "length": 24
+    }
+  },
+  "log": {
+    "level": "info",
+    "file": "mainnet/logs/pool.log",
+    "maxSize": 100,
+    "maxAge": 7,
+    "compress": true
+  }
+}

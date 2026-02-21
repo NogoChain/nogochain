@@ -1,0 +1,30 @@
+# Prometheus配置文件
+
+# 全局配置
+global:
+  scrape_interval: 15s  # 抓取间隔
+  evaluation_interval: 15s  # 评估间隔
+
+# 告警配置
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# 告警规则配置
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# 抓取配置
+scrape_configs:
+  # NogoChain节点监控
+  - job_name: 'nogochain-node'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # NogoChain矿池监控
+  - job_name: 'nogochain-pool'
+    static_configs:
+      - targets: ['localhost:9092']

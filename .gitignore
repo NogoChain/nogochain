@@ -1,0 +1,25 @@
+# Binaries
+/build/
+/nogochain
+
+# Dependencies
+/vendor/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Test coverage
+*.out

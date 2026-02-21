@@ -1,0 +1,56 @@
+{
+  "p2p": {
+    "port": 30303,
+    "maxPeers": 50,
+    "bootnodes": []
+  },
+  "discovery": {
+    "enabled": true,
+    "ttl": 30,
+    "interval": 30,
+    "bootnodes": []
+  },
+  "sync": {
+    "enabled": true,
+    "fastSync": true,
+    "blockBatch": 128,
+    "maxForkDepth": 100
+  },
+  "rpc": {
+    "enabled": true,
+    "port": 8545,
+    "host": "127.0.0.1",
+    "jwt": {
+      "enabled": true,
+      "secret": "production-secret-key-for-jwt-authentication",
+      "tokenFile": "E:/nogochain/mainnet/jwt-token.txt"
+    }
+  },
+  "log": {
+    "level": "info",
+    "file": "mainnet/logs/nogochain-mainnet.log",
+    "maxSize": 100,
+    "maxAge": 7,
+    "compress": true
+  },
+  "metrics": {
+    "enabled": true,
+    "port": 9090,
+    "host": "127.0.0.1"
+  },
+  "chain": {
+    "chainId": 318,
+    "genesisFile": "E:/nogochain/mainnet/config/genesis.json",
+    "dataDir": "E:/nogochain/mainnet/data",
+    "difficultyAdjustmentInterval": 10,
+    "targetBlockTime": 20,
+    "maxDifficultyAdjustment": 0.5
+  },
+  "miner": {
+    "enabled": false,
+    "coinbase": "0x71c7656ec7ab88b098defb751b7401b5f6d8976f",
+    "gasPrice": 1,
+    "gasLimit": 40000000,
+    "extraData": "MainNet Node"
+  }
+}

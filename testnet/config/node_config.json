@@ -1,0 +1,56 @@
+{
+  "p2p": {
+    "port": 30304,
+    "maxPeers": 30,
+    "bootnodes": []
+  },
+  "discovery": {
+    "enabled": true,
+    "ttl": 30,
+    "interval": 30,
+    "bootnodes": []
+  },
+  "sync": {
+    "enabled": true,
+    "fastSync": true,
+    "blockBatch": 128,
+    "maxForkDepth": 100
+  },
+  "rpc": {
+    "enabled": true,
+    "port": 8546,
+    "host": "127.0.0.1",
+    "jwt": {
+      "enabled": true,
+      "secret": "test-secret-key-for-jwt-authentication",
+      "tokenFile": "testnet/jwt-token.txt"
+    }
+  },
+  "log": {
+    "level": "info",
+    "file": "testnet/logs/nogochain-testnet.log",
+    "maxSize": 100,
+    "maxAge": 7,
+    "compress": true
+  },
+  "metrics": {
+    "enabled": true,
+    "port": 9091,
+    "host": "127.0.0.1"
+  },
+  "chain": {
+    "chainId": 31888,
+    "genesisFile": "testnet/config/genesis.json",
+    "dataDir": "testnet/data",
+    "difficultyAdjustmentInterval": 5,
+    "targetBlockTime": 10,
+    "maxDifficultyAdjustment": 0.75
+  },
+  "miner": {
+    "enabled": true,
+    "coinbase": "0x71c7656ec7ab88b098defb751b7401b5f6d8976f",
+    "gasPrice": 1,
+    "gasLimit": 40000000,
+    "extraData": "TestNet Miner"
+  }
+}
