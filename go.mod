@@ -1,4 +1,4 @@
-module nogochain
+module github.com/nogochain/nogochain
 
 go 1.26.0
 
